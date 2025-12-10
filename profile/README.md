@@ -2,19 +2,13 @@
 
 **A transparent type inference framework for Pharo Smalltalk**
 
-Hyalinos integrates ecosystem of type inference tools and collaborative knowledge on elicitated types. Together, they provide seamless IDE integration for discovering, sharing, and utilizing type information during development.
-
-## Components
-
-Hyalinos combines two complementary components:
-
-- **HYPHE** - A hybrid type inference framework that aggregates types from multiple sources
-- **Mycelium** - A collaborative type knowledge storage system
+Hyalinos integrates ecosystem of type inference tools and collaborative knowledge on elicitated types. Together, they provide seamless IDE integration for discovering, sharing, and utilizing type information during development. It combines two complementary components: [**HYPHE**](https://github.com/hyalinos/hyphe) and [**Mycelium**](https://github.com/hyalinos/mycelium)
 
 HYPHE performs multi-source type inference by integrating:
 
-- Existing Pharo type inference tools
-- Type heuristics
+- [Type Info Tools](https://github.com/JanBliznicenko/TypeInfoTools) 
+- AST-based structural inference (ex [TypeMe](https://github.com/lsafina/typeMe))
+- Name-based heursitics (ex [TypeMe](https://github.com/lsafina/typeMe))
 - Offline tests profiling
 
 The results are merged using diferent merging strategies (confidence-based, tiered, consensus).
@@ -28,8 +22,8 @@ Mycelium extends HYPHE by enabling community-wide type knowledge sharing:
 Hyalinos integrates directly into the Pharo IDE, providing:
 
 - Interface for running inference
-- Choosing packages, confidence levels, merging strategies for the analysis
-- Subscribing repositories to trigger analysis on changes
+- Choosing packages, confidence levels, merging strategies for tuning inference
+- Subscribing repositories to trigger inference on changes
 - Type hints for methods return types during investigation
 - Visual indicators for type confidence levels
 
