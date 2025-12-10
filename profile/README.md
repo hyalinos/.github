@@ -11,36 +11,29 @@ Hyalinos combines two complementary components:
 - **HYPHE** - A hybrid type inference framework that aggregates types from multiple sources
 - **Mycelium** - A collaborative type knowledge storage system
 
-For detailed documentation, see:
-- [HYPHE Documentation](https://github.com/hyalinos/hyphe)
-- [Mycelium Documentation](https://github.com/hyalinos/mycelium)
-
-
-### HYPHE (Hybrid Type Inference Framework)
-
 HYPHE performs multi-source type inference by integrating:
 
 - Existing Pharo type inference tools
-- Type heuristics from code patterns
-- Runtime monitoring results
-- User feedback
+- Type heuristics
+- Offline tests profiling
 
-These diverse sources are merged using a confidence-based algorithm that weighs each source's reliability, producing robust type information even for highly dynamic code.
-
-### Mycelium (Collaborative Type Storage)
+The results are merged using diferent merging strategies (confidence-based, tiered, consensus).
 
 Mycelium extends HYPHE by enabling community-wide type knowledge sharing:
 
 - Stores inferred types in GitHub repositories
 - Synchronizes between local and remote type storage
-- Maintains type knowledge across package versions
 - Allows users to share type discoveries
-
-## IDE Integration
 
 Hyalinos integrates directly into the Pharo IDE, providing:
 
-- Type information during coding
-- Type hints during method investigation
+- Interface for running inference
+- Choosing packages, confidence levels, merging strategies for the analysis
+- Subscribing repositories to trigger analysis on changes
+- Type hints for methods return types during investigation
 - Visual indicators for type confidence levels
+
+## ICPC
+For ICPC artefact please go to [ICPC](https://github.com/hyalinos/icpc)
+
 
